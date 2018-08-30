@@ -1,8 +1,6 @@
 ## Sorting algorithms
 
-### Bubblesort
-
-Slow. 
+- **Bubblesort:** Slow. Complexity O(n^2).
 
 # Usage
 
