@@ -1,14 +1,14 @@
 #include "bubblesort.h"
 
-void bubblesort_int_array(int *arr, size_t size) {
+void bubblesort_int_array(int *arr, size_t n) {
     
     int swap;
 
-    for (size_t i = 0; i < size - 1; i++) {
+    for (size_t i = n - 1; i > 0; i--) {
 
-        for (size_t j = 0; j < i -1; i++)
+        for (size_t j = 0; j < i; j++)
         {
-            if (arr[j] < arr[j + 1]) {
+            if (arr[j] > arr[j + 1]) {
                 swap = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = swap;

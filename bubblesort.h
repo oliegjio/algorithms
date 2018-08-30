@@ -3,6 +3,6 @@
 
 #include <stddef.h>
 
-void bubblesort_int_array(int *arr, size_t size);
+void bubblesort_int_array(int *arr, size_t n);
 
 #endif // BUBBLESORT_H_
