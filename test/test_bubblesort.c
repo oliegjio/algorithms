@@ -5,8 +5,8 @@
 
 #include "../bubblesort.h"
 
-int init_suite() { return 0; }
-int clean_suite() { return 0; }
+static int init_suite() { return 0; }
+static int clean_suite() { return 0; }
 
 void test_bubblesort_unsorted_array_1() {
 

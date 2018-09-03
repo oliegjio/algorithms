@@ -11,10 +11,13 @@ compile: objects
 clean:
 	rm *.o $(PROG_NAME)
 
-objects: main.o test_bubblesort.o
+objects: main.o test_bubblesort.o test_insertion_sort.o
+
+main.o: main.c
+	$(CC) $(CC_FLAGS) -c main.c
 
 test_bubblesort.o: test_bubblesort.c
 	$(CC) $(CC_FLAGS) -c test_bubblesort.c
 
-main.o: main.c
-	$(CC) $(CC_FLAGS) -c main.c
+test_insertion_sort.o: test_insertion_sort.c
+	$(CC) $(CC_FLAGS) -c test_insertion_sort.c
