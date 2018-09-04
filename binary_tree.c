@@ -12,8 +12,26 @@ struct BinaryTree *binary_tree(int v) {
   return t;
 }
 
-void binary_tree_insert_node(struct BinaryTree *t, int e) {
+int binary_tree_insert_node(struct BinaryTree *t, int e) {
   
+  if (e < t->v) {
+
+    if (t->l != NULL) return binary_tree_insert_node(t->l, e);
+    else {
+      t->l = binary_tree(e);
+    }
+
+  }
+  else if (e > t->v) {
+
+    if (t->r != NULL) return binary_tree_insert_node(t->r, e);
+    else {
+      t->r = binary_tree(e);
+    }
+
+  } else return 0;
+
+  return 1;
 }
 
 void binary_tree_delete_node(struct BinaryTree *t, int e) {
