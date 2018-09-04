@@ -1,6 +1,7 @@
 ## Sorting algorithms
 
-- **Bubblesort:** Slow. Complexity O(n^2).
+- **Bubblesort** complexity is O(n^2).
+- **Insertion sort** complexity is O(n^2).
 
 # Usage
 
