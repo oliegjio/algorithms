@@ -14,7 +14,7 @@ shared: objects
 clean:
 	rm *.o $(PROG_NAME) $(PROG_NAME).so
 
-objects: main.o bubblesort.o insertion_sort.o
+objects: main.o bubblesort.o insertion_sort.o binary_tree.o
 
 main.o: main.c
 	$(CC) $(CC_FLAGS) -c main.c
@@ -24,3 +24,6 @@ bubblesort.o: bubblesort.c
 
 insertion_sort.o: insertion_sort.c
 	$(CC) $(CC_FLAGS) -c insertion_sort.c
+
+binary_tree.o: binary_tree.c
+	$(CC) $(CC_FLAGS) -c binary_tree.c

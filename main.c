@@ -1,17 +1,30 @@
-#include "bubblesort.h"
+#include "binary_tree.h"
 
 #include <stdlib.h>
 #include <stdio.h>
 
 int main(int argc, char *argv[]) {
 
-    /* int arr[] = {10, 3, 8, 2, 9, 1, 7, 5, 13}; */
-    /* size_t size = 9; */
+  struct BinaryTree *t = binary_tree(5);
+  struct BinaryTree *t2 = binary_tree(6);
+  struct BinaryTree *t3 = binary_tree(7);
+  struct BinaryTree *t4 = binary_tree(8);
+  struct BinaryTree *t5 = binary_tree(3);
+  struct BinaryTree *t6 = binary_tree(2);
 
-    /* bubblesort_int_array(arr, size); */
+  t->l = t2;
+  t->r = t3;
+  t2->l = t4;
+  t2->r = t5;
+  t3->r = t6;
 
-    /* for (size_t i = 0; i < size; i++) { */
-    /*     printf("%d  ", arr[i]); */
-    /* } */
-    /* printf("\n"); */
+  size_t elems = binary_tree_elements(t);
+  printf("ELEMS: %zu \n", elems);
+
+  size_t depth = binary_tree_depth(t);
+  printf("DEPTH: %zu \n", depth);
+
+  binary_tree_print(t);
+
+  return 0;
 }
