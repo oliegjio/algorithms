@@ -1,5 +1,7 @@
 #include "binary_tree.h"
 
+#include <stdio.h>
+
 struct BinaryTree *binary_tree(int v) {
   
   struct BinaryTree *t = (struct BinaryTree *) malloc(sizeof(struct BinaryTree));
@@ -19,6 +21,7 @@ int binary_tree_insert_node(struct BinaryTree *t, int e) {
     if (t->l != NULL) return binary_tree_insert_node(t->l, e);
     else {
       t->l = binary_tree(e);
+      return 1;
     }
 
   }
@@ -27,6 +30,7 @@ int binary_tree_insert_node(struct BinaryTree *t, int e) {
     if (t->r != NULL) return binary_tree_insert_node(t->r, e);
     else {
       t->r = binary_tree(e);
+      return 1;
     }
 
   } else return 0;

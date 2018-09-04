@@ -13,7 +13,7 @@ struct BinaryTree {
 
 struct BinaryTree *binary_tree(int v);
 
-void binary_tree_insert_node(struct BinaryTree *t, int e);
+int binary_tree_insert_node(struct BinaryTree *t, int e);
 void binary_tree_delete_node(struct BinaryTree *t, int e);
 void binary_tree_balance(struct BinaryTree *t);
 
